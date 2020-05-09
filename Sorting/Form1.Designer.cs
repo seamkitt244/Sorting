@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.originalLabel = new System.Windows.Forms.Label();
             this.sortedLabel = new System.Windows.Forms.Label();
             this.originalOutput = new System.Windows.Forms.TextBox();
@@ -45,10 +46,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.selectionOutput = new System.Windows.Forms.Label();
+            this.bubbleOutput = new System.Windows.Forms.Label();
+            this.insertionOutput = new System.Windows.Forms.Label();
             this.sortButton = new System.Windows.Forms.Button();
+            this.sortTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // originalLabel
@@ -75,12 +77,12 @@
             // 
             // originalOutput
             // 
-            this.originalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.originalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F);
             this.originalOutput.Location = new System.Drawing.Point(81, 107);
             this.originalOutput.Multiline = true;
             this.originalOutput.Name = "originalOutput";
             this.originalOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.originalOutput.Size = new System.Drawing.Size(100, 294);
+            this.originalOutput.Size = new System.Drawing.Size(92, 294);
             this.originalOutput.TabIndex = 5;
             // 
             // sortedOutput
@@ -89,7 +91,7 @@
             this.sortedOutput.Multiline = true;
             this.sortedOutput.Name = "sortedOutput";
             this.sortedOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sortedOutput.Size = new System.Drawing.Size(100, 294);
+            this.sortedOutput.Size = new System.Drawing.Size(94, 294);
             this.sortedOutput.TabIndex = 6;
             // 
             // tenButton
@@ -174,7 +176,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.875F);
-            this.label4.Location = new System.Drawing.Point(39, 577);
+            this.label4.Location = new System.Drawing.Point(14, 580);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(476, 29);
             this.label4.TabIndex = 14;
@@ -184,7 +186,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.875F);
-            this.label5.Location = new System.Drawing.Point(39, 637);
+            this.label5.Location = new System.Drawing.Point(14, 641);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(721, 29);
             this.label5.TabIndex = 15;
@@ -194,7 +196,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.875F);
-            this.label6.Location = new System.Drawing.Point(39, 707);
+            this.label6.Location = new System.Drawing.Point(14, 700);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(645, 29);
             this.label6.TabIndex = 16;
@@ -204,7 +206,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
-            this.label7.Location = new System.Drawing.Point(777, 456);
+            this.label7.Location = new System.Drawing.Point(760, 456);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 33);
             this.label7.TabIndex = 17;
@@ -214,7 +216,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
-            this.label8.Location = new System.Drawing.Point(980, 456);
+            this.label8.Location = new System.Drawing.Point(954, 456);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 33);
             this.label8.TabIndex = 18;
@@ -224,35 +226,35 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
-            this.label9.Location = new System.Drawing.Point(1119, 456);
+            this.label9.Location = new System.Drawing.Point(1108, 456);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(127, 33);
             this.label9.TabIndex = 19;
             this.label9.Text = "Insertion";
             // 
-            // label10
+            // selectionOutput
             // 
-            this.label10.Location = new System.Drawing.Point(783, 493);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 243);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "label10";
+            this.selectionOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.875F);
+            this.selectionOutput.Location = new System.Drawing.Point(771, 525);
+            this.selectionOutput.Name = "selectionOutput";
+            this.selectionOutput.Size = new System.Drawing.Size(178, 262);
+            this.selectionOutput.TabIndex = 20;
             // 
-            // label11
+            // bubbleOutput
             // 
-            this.label11.Location = new System.Drawing.Point(968, 493);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(137, 243);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "label11";
+            this.bubbleOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.875F);
+            this.bubbleOutput.Location = new System.Drawing.Point(955, 528);
+            this.bubbleOutput.Name = "bubbleOutput";
+            this.bubbleOutput.Size = new System.Drawing.Size(137, 217);
+            this.bubbleOutput.TabIndex = 21;
             // 
-            // label12
+            // insertionOutput
             // 
-            this.label12.Location = new System.Drawing.Point(1111, 493);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 243);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "label12";
+            this.insertionOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.875F);
+            this.insertionOutput.Location = new System.Drawing.Point(1109, 528);
+            this.insertionOutput.Name = "insertionOutput";
+            this.insertionOutput.Size = new System.Drawing.Size(137, 217);
+            this.insertionOutput.TabIndex = 22;
             // 
             // sortButton
             // 
@@ -265,15 +267,17 @@
             this.sortButton.UseVisualStyleBackColor = true;
             this.sortButton.Click += new System.EventHandler(this.sortButton_Click);
             // 
+            // sortTimer
+            // 
+            this.sortTimer.Enabled = true;
+            this.sortTimer.Interval = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1672, 770);
+            this.ClientSize = new System.Drawing.Size(1275, 738);
             this.Controls.Add(this.sortButton);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -291,6 +295,9 @@
             this.Controls.Add(this.originalOutput);
             this.Controls.Add(this.sortedLabel);
             this.Controls.Add(this.originalLabel);
+            this.Controls.Add(this.selectionOutput);
+            this.Controls.Add(this.insertionOutput);
+            this.Controls.Add(this.bubbleOutput);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Sorting Examples";
@@ -317,10 +324,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label selectionOutput;
+        private System.Windows.Forms.Label bubbleOutput;
+        private System.Windows.Forms.Label insertionOutput;
         private System.Windows.Forms.Button sortButton;
+        private System.Windows.Forms.Timer sortTimer;
     }
 }
 
